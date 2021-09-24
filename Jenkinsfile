@@ -9,7 +9,7 @@ pipeline {
       stage ("Launch Cloud Formation Stack") {
         steps {
           sh "aws configure list"
-          sh  "aws cloudformation create-stack --stack-name myteststack --template-body file://cfn/s3.template --capabilities CAPABILITY_IAM"    
+          sh  "aws cloudformation create-stack --stack-name myteststack --template-body file://cfn/s3.template"    
         
         }
       }
